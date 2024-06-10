@@ -1,5 +1,6 @@
 import React from 'react'
 import { createSearchParams, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import ReadComponent from '../../components/components/todo/ReadComponent'
 
 function ReadPage(props) {
     // Path variable
@@ -30,12 +31,13 @@ function ReadPage(props) {
     }
 
     return (
-        <div className={'text-3xl'}>
-            Todo Read Page {tno}
-            <div>
-                <button onClick={() => moveToModify(tno)}> Test Modify </button><br></br>
-                <button onClick={moveToList}> Test List </button>
+        <div className="font-extrabold w-full bg-white mt-6">
+
+            <div className="text-2xl">
+                Todo Read Page Component{tno}
             </div>
+
+            <ReadComponent tno={tno}/>
         </div>
     )
 }
